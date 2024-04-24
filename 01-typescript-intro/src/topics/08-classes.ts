@@ -3,7 +3,8 @@ export class Person {
     // private address: string;
 
     constructor(
-        public name: string,
+        public firstName: string,
+        public lastName: string,
         private address: string = "Not Address") {
     };
 
@@ -11,18 +12,30 @@ export class Person {
 }
 
 
-export class Hero extends Person {
+// export class Hero extends Person {
+
+//     constructor(
+//         public alterEgo: string,
+//         public age: number,
+//         public realName: string
+
+//     ) {
+//         super(realName, "New York");
+//     }
+// }
+export class Hero {
 
     constructor(
         public alterEgo: string,
         public age: number,
-        public realName: string
+        public realName: string,
+        public person: Person,
 
     ) {
-        super(realName, "New York");
+        // this.person = new Person(realName)
     }
 }
 
-
-const iroman = new Hero("Iroman", 45, "Tony");
+const tony = new Person("Tony", "Starcks", "New York");
+const iroman = new Hero("Iroman", 45, "Tony", tony);
 console.table(iroman)
