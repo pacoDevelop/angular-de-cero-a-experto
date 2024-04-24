@@ -3,12 +3,26 @@ export class Person {
     // private address: string;
 
     constructor(
-        public name: string = "Fernando",
+        public name: string,
         private address: string = "Not Address") {
     };
 
 
 }
 
-const iroman = new Person("Iroman");
+
+export class Hero extends Person {
+
+    constructor(
+        public alterEgo: string,
+        public age: number,
+        public realName: string
+
+    ) {
+        super(realName, "New York");
+    }
+}
+
+
+const iroman = new Hero("Iroman", 45, "Tony");
 console.table(iroman)
