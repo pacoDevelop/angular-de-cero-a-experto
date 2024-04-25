@@ -20,6 +20,10 @@ export class MainPageComponent implements OnInit {
     name: "Vegeta",
     power: 7500
   }]
+
+  onNewCharacter(chracter: Character): void {
+    console.log(chracter)
+  }
   constructor() { }
 
   ngOnInit() { }
