@@ -21,8 +21,11 @@ export class MainPageComponent implements OnInit {
     power: 7500
   }]
 
-  onNewCharacter(chracter: Character): void {
-    console.log(chracter)
+  onNewCharacter(character: Character): void {
+    this.characters.push(character)
+  }
+  onDeleteCharacter(index: number): void {
+    this.characters.splice(index, 1)
   }
   constructor() { }
 
