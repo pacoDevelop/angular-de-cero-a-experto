@@ -27,6 +27,7 @@ export class GifsService {
     }
     this._tagsHistory.unshift(tag)
     this._tagsHistory = this.tagsHistory.splice(0, 10)
+    this.saveLocalStorage();
   }
 
 
@@ -49,5 +50,9 @@ export class GifsService {
   public getGifsByTag(index: number) {
     const tag: string = this.tagsHistory[index]
     this.searchTag(tag)
+  }
+
+  private saveLocalStorage(): void {
+    localStorage.setItem('history', JSON.stringify(this._tagsHistory))
   }
 }
