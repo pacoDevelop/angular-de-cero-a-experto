@@ -11,4 +11,8 @@ export class SidebarComponent {
   get tags(): string[] {
     return this.gifsService.tagsHistory;
   }
+
+  public onGetGifsByTag(i: number) {
+    this.gifsService.getGifsByTag(i)
+  }
 }

@@ -45,4 +45,9 @@ export class GifsService {
         this.gifList = res.data
       })
   }
+
+  public getGifsByTag(index: number) {
+    const tag: string = this.tagsHistory[index]
+    this.searchTag(tag)
+  }
 }
