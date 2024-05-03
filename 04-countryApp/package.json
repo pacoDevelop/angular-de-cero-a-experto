@@ -10,7 +10,7 @@
     "delete:docs": "trash ../docs/04-country-app-deploy",
     "copy:dist": "copyfiles dist/country-app/browser/* ../docs/04-country-app-deploy/ -f ",
     "copy:assets": "copyfiles dist/country-app/browser/assets/* ../docs/04-country-app-deploy/assets/ -f ",
-    "build:href": "ng build --base-href ./",
+    "build:href": "ng build --base-href ./angular-de-cero-a-experto/04-country-app-deploy/",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run copy:assets"
   },
   "private": true,
