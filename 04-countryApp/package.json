@@ -11,7 +11,7 @@
     "copy:dist": "copyfiles dist/country-app/browser/* ../docs/04-country-app-deploy/ -f ",
     "rename:404": "node -e \"require('fs').rename('dist/country-app/browser/index.html', '../docs/04-country-app-deploy/404.html', function(err) { if (err) console.log(err); console.log('File successfully renamed!') })\"",
     "copy:assets": "copyfiles dist/country-app/browser/assets/* ../docs/04-country-app-deploy/assets/ -f ",
-    "build:href": "ng build --base-href ./",
+    "build:href": "ng build --base-href https://pacodevelop.github.io/angular-de-cero-a-experto/04-country-app-deploy/",
     "build:github": "npm run delete:docs && npm run build:href && npm run copy:dist && npm run copy:assets && npm run rename:404"
   },
   "private": true,
