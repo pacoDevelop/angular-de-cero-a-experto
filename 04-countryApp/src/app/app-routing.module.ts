@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomePageComponent } from './shared/pages/home-page/home-page.component';
 import { AboutPageComponent } from './shared/pages/about-page/about-page.component';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
+import { CountriesModule } from './countries/countries.module';
 
 // const BASE_URL = 'angular-de-cero-a-experto/04-country-app-deploy/';
 const BASE_URL = '';
@@ -14,7 +15,7 @@ const routes: Routes = [
   // },
   {
     path: ``,
-    component: HomePageComponent
+    component: HomePageComponent,
   },
   {
     path: `about`,
@@ -26,7 +27,8 @@ const routes: Routes = [
   },
   {
     path: `countries`,
-    component: ContactPageComponent
+    loadChildren: () => import('./countries/countries.module')
+      .then(module => module.CountriesModule)
   },
   {
     path: '**',
