@@ -7,24 +7,32 @@ import { AboutPageComponent } from './shared/pages/about-page/about-page.compone
 const BASE_URL = '';
 
 const routes: Routes = [
+  // {
+  //   path: `${BASE_URL}home`,
+  //   component: HomePageComponent
+  // },
   {
-    path: `${BASE_URL}home`,
+    path: ``,
     component: HomePageComponent
   },
   {
-    path: `${BASE_URL}about`,
+    path: `about`,
     component: AboutPageComponent
   },
   {
     path: '**',
-    redirectTo: "/home",
-    pathMatch: "full"
+    redirectTo: "",
   },
-  {
-    path: '',
-    redirectTo: "/home",
-    pathMatch: "full"
-  }
+  // {
+  //   path: '**',
+  //   redirectTo: "/home",
+  //   pathMatch: "full"
+  // },
+  // {
+  //   path: '',
+  //   redirectTo: "/home",
+  //   pathMatch: "full"
+  // }
 ];
 
 @NgModule({
