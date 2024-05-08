@@ -20,8 +20,6 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     CommonModule,
     CountriesRoutingModule,
-    SharedModule,
-    HttpClientModule
-  ]
+    SharedModule]
 })
 export class CountriesModule { }
