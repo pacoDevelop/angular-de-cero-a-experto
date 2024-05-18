@@ -23,7 +23,7 @@
         <th>{{country.capital}}</th>
         <th>{{country.name.common}}</th>
         <th>{{country.population | number}}</th>
-        <th><a href="">Ver más...</a></th>
+        <th><a [routerLink]="['/countries/by',country.cca3]">Ver más...</a></th>
       </tr>
     </tbody>
   </table>
