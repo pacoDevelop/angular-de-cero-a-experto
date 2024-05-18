@@ -7,7 +7,7 @@
 <div *ngIf="country;else loading">
   <div class="row">
     <div class="col-12">
-      <h2>Pais: <strong>{{country?.name?.common}}</strong></h2>
+      <h2>Pais: <strong>{{country.name.common}}</strong></h2>
       <hr>
     </div>
   </div>
@@ -35,16 +35,28 @@
     <div class="col">
       <h3>Traducciones</h3>
       <div class="d-flex flex-wrap">
-        <span class="badge bg-primary m-1">{{country.translations['ara']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['bre']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['ces']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['cym']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['deu']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['est']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['fin']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['ita']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['kor']?.common}}</span>
-        <span class="badge bg-primary m-1">{{country.translations['per']?.common}}</span>
+        <div class="d-flex flex-wrap">
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['ara']">{{country.translations['ara'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['bre']">{{country.translations['bre'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['ces']">{{country.translations['ces'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['cym']">{{country.translations['cym'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['deu']">{{country.translations['deu'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['est']">{{country.translations['est'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['fin']">{{country.translations['fin'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['ita']">{{country.translations['ita'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['kor']">{{country.translations['kor'].common}}</span>
+          <span class="badge bg-primary m-1"
+            *ngIf="country.translations['per']">{{country.translations['per'].common}}</span>
+        </div>
       </div>
     </div>
   </div>
