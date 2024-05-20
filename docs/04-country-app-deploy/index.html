@@ -17,7 +17,7 @@
 <body class="container">
   <script>
     (function () {
-      sessionStorage.setItem("angularError") = window.location.href;
+      sessionStorage.setItem("angularError", window.location.href);
       // Retrieve the URL the user was trying to access when receiving the 404.
       var redirect = sessionStorage.redirect;
       // Remove the URL from sessionStorage.
