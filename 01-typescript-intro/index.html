@@ -9,19 +9,6 @@
 </head>
 
 <body>
-  <script>
-    (function () {
-      sessionStorage.setItem("angularError", window.location.href);
-      // Retrieve the URL the user was trying to access when receiving the 404.
-      var redirect = sessionStorage.redirect;
-      // Remove the URL from sessionStorage.
-      delete sessionStorage.redirect;
-      if (redirect && redirect != location.href) {
-        // We need to redirect to the URL the user was trying to access.
-        history.replaceState(null, null, redirect);
-      }
-    })();
-  </script>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
 </body>
