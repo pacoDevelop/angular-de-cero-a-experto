@@ -17,21 +17,15 @@
 <body class="container">
   <script>
     (function () {
-      sessionStorage.angular = window.location.pathname;
-      console.log(sessionStorage.redirect)
+      sessionStorage.setItem("angularError") = window.location.href;
       // Retrieve the URL the user was trying to access when receiving the 404.
       var redirect = sessionStorage.redirect;
       // Remove the URL from sessionStorage.
       delete sessionStorage.redirect;
-      // Check if we actually need to redirect.
-      // if (redirect = "") {
-      //   redirect = "https://pacodevelop.github.io/angular-de-cero-a-experto/04-country-app-deploy"
-      // }
       if (redirect && redirect != location.href) {
         // We need to redirect to the URL the user was trying to access.
         history.replaceState(null, null, redirect);
       }
-      console.log(redirect)
     })();
   </script>
   <!-- /Github Pages hack. -->
