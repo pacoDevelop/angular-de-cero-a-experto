@@ -17,6 +17,7 @@
 <body class="container">
   <script>
     (function () {
+      console.log(sessionStorage.redirect)
       // Retrieve the URL the user was trying to access when receiving the 404.
       var redirect = sessionStorage.redirect;
       // Remove the URL from sessionStorage.
@@ -29,7 +30,7 @@
         // We need to redirect to the URL the user was trying to access.
         history.replaceState(null, null, redirect);
       }
-      console.log(sessionStorage.redirect)
+      console.log(redirect)
     })();
   </script>
   <!-- /Github Pages hack. -->
