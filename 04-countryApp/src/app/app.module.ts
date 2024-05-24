@@ -7,6 +7,7 @@ import { SharedModule } from './shared/shared.module';
 import { ContactPageComponent } from './shared/pages/contact-page/contact-page.component';
 import { HttpClientModule } from '@angular/common/http';
 
+
 @NgModule({
   declarations: [
     AppComponent,
