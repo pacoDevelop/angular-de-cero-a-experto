@@ -22,7 +22,6 @@ export class ByCapitalPageComponent implements OnInit {
 
   searchByCapital(term: string) {
     this.isLoading = true;
-    console.log('Desde ByCapitalPage', term);
     this.serviceCountry.searchCapital(term).subscribe(countries => {
       this.countries = countries
       this.isLoading = false

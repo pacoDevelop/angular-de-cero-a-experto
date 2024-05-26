@@ -13,13 +13,21 @@ export class ByRegionPageComponent {
   public countries: Country[] = [];
   public regions: Region[] = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   public selectedRegion: Region = 'Africa';
+  public isLoading: boolean = false;
 
   constructor(private serviceCountry: CountriesService) { }
-
+  ngOnInit(): void {
+    this.countries = this.serviceCountry.cacheStore.byRegion.countries;
+    this.selectedRegion = this.serviceCountry.cacheStore.byRegion.region;
+  }
 
   searchByRegion(region: Region): void {
+    this.isLoading = true;
+    this.serviceCountry.searchRegion(region).subscribe(countries => {
+      this.countries = countries
+      this.isLoading = false
+      this.selectedRegion = region;
+    });
 
-    this.serviceCountry.searchRegion(region).subscribe(countries => this.countries = countries);
-    this.selectedRegion = region;
   }
 }

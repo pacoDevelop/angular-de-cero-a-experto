@@ -11,7 +11,7 @@ export class CountriesService {
   public cacheStore: CacheStore = {
     byCapital: { term: "", countries: [] },
     byCountries: { term: "", countries: [] },
-    byRegion: { region: "", countries: [] }
+    byRegion: { region: "Africa", countries: [] }
   }
 
   constructor(private http: HttpClient) {
