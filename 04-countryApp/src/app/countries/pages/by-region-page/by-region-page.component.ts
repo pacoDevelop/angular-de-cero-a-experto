@@ -16,6 +16,8 @@ export class ByRegionPageComponent {
   public isLoading: boolean = false;
 
   constructor(private serviceCountry: CountriesService) { }
+
+
   ngOnInit(): void {
     this.countries = this.serviceCountry.cacheStore.byRegion.countries;
     this.selectedRegion = this.serviceCountry.cacheStore.byRegion.region;
